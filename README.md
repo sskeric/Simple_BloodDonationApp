@@ -2,7 +2,7 @@
 A simple Android application built using Jetpack Compose that manages blood donor profiles, generates reference codes, and allows users to book and manage blood donation appointments across multiple hospitals.
 
 # ✨ Features
-1. 👤 Donor Profile Management
+1. 👤 Donor Profile Management - 
 Users can register blood donor profiles with personal details
 Includes validation for:
 + Name (letters only)
@@ -20,7 +20,7 @@ Used to:
 + Retrieve donor profile
 + Prevent duplicate submissions
 
-3. 🏥 Appointment Booking System
+3. 🏥 Appointment Booking System - 
 Users book appointments using:
 + Reference code
 + Selected hospital
@@ -29,7 +29,7 @@ Users book appointments using:
 + Prevents duplicate bookings using “USED” flag
 + Stores appointment data locally using SharedPreferences
 
-4. 🏨 Hospital Information System
+4. 🏨 Hospital Information System - 
 Displays list of blood donation centers in Kedah, Malaysia
 Each hospital includes:
 + Image
@@ -37,7 +37,7 @@ Each hospital includes:
 + Location map image
 + Users can switch between hospitals dynamically
 
-5. 👁 Profile & Appointment Viewer
+5. 👁 Profile & Appointment Viewer - 
 Search donor profile using IC number
 + Displays:
 + Personal details
@@ -78,7 +78,7 @@ System links:
 + Reference Code → Appointment
 + User can view, share, or delete stored data
 
-# 🔒 Data & Security
+# 🔒 Data & Security - 
 All data is stored locally using SharedPreferences
 + No internet server or backend is used
 + No authentication system is implemented
