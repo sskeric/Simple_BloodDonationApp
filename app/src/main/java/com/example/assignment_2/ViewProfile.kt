@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.core.content.edit
 
 class ViewProfileActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,45 +72,64 @@ fun ViewProfileScreen(context: Context) {
     }
 
     // Function to delete profile data from SharedPreferences
+     // Function to delete profile data from SharedPreferences
     fun deleteProfileData(ic: String) {
         Log.d("ViewProfileScreen", "deleteProfileData called with IC: $ic")
-        val sharedPreferences = context.getSharedPreferences("user_data", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.remove("NAME_$ic")
-        editor.remove("IC_$ic")
-        editor.remove("AGE_$ic")
-        editor.remove("DOB_$ic")
-        editor.remove("BLOOD_TYPE_$ic")
-        editor.remove("GENDER_$ic")
-        editor.remove("PHONE_$ic")
-        editor.remove("EMAIL_$ic")
-        editor.remove("ADDRESS_$ic")
-        editor.apply()
+
+        val sharedPreferences =
+            context.getSharedPreferences("user_data", Context.MODE_PRIVATE)
+
+        sharedPreferences.edit {
+            remove("NAME_$ic")
+            remove("IC_$ic")
+            remove("AGE_$ic")
+            remove("DOB_$ic")
+            remove("BLOOD_TYPE_$ic")
+            remove("GENDER_$ic")
+            remove("PHONE_$ic")
+            remove("EMAIL_$ic")
+            remove("ADDRESS_$ic")
+        }
+
         Log.d("ViewProfileScreen", "Profile data deleted for IC: $ic")
     }
 
     // Function to delete appointment data from SharedPreferences
     fun deleteAppointmentData(referenceCode: String) {
-        Log.d("ViewProfileScreen", "deleteAppointmentData called with referenceCode: $referenceCode")
-        val sharedPreferences = context.getSharedPreferences("appointment_data", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.remove("DATE_$referenceCode")
-        editor.remove("TIME_$referenceCode")
-        editor.remove("HOSPITAL_$referenceCode")
-        editor.apply()
-        Log.d("ViewProfileScreen", "Appointment data deleted for referenceCode: $referenceCode")
+        Log.d(
+            "ViewProfileScreen",
+            "deleteAppointmentData called with referenceCode: $referenceCode"
+        )
+
+        val sharedPreferences =
+            context.getSharedPreferences("appointment_data", Context.MODE_PRIVATE)
+
+        sharedPreferences.edit {
+            remove("DATE_$referenceCode")
+            remove("TIME_$referenceCode")
+            remove("HOSPITAL_$referenceCode")
+        }
+
+        Log.d(
+            "ViewProfileScreen",
+            "Appointment data deleted for referenceCode: $referenceCode"
+        )
     }
 
     // Function to delete reference code from SharedPreferences
     fun deleteReferenceCode(ic: String) {
         Log.d("ViewProfileScreen", "deleteReferenceCode called with IC: $ic")
-        val sharedPreferences = context.getSharedPreferences("user_data", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.remove("REFERENCE_CODE_$ic") // Remove the specific reference code
-        editor.apply()
+
+        val sharedPreferences =
+            context.getSharedPreferences("user_data", Context.MODE_PRIVATE)
+
+        sharedPreferences.edit {
+            remove("REFERENCE_CODE_$ic")
+        }
+
         Log.d("ViewProfileScreen", "Reference code deleted for IC: $ic")
     }
-
+    
     Box(
         modifier = Modifier
             .fillMaxSize()
