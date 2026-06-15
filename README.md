@@ -78,7 +78,7 @@ System links:
 + Reference Code → Appointment
 + User can view, share, or delete stored data
 
-# 🔒 Data & Security - 
+# 🔒 Data & Security 
 All data is stored locally using SharedPreferences
 + No internet server or backend is used
 + No authentication system is implemented
@@ -88,8 +88,7 @@ All data is stored locally using SharedPreferences
 + Tokens
 + Firebase credentials
 + External database URLs
-
-# ⚠️ The “reference code” is NOT a security token — it is only a local identifier used to link profile and appointment data.
++ ⚠️ The “reference code” is NOT a security token — it is only a local identifier used to link profile and appointment data.
 
 # ⚙️ Setup Instructions
 a. Prerequisites
@@ -123,14 +122,13 @@ This project demonstrates:
 
 # 📌 Summary
 This application is a local Android blood donation management system that allows:
-✔ Donor registration
-✔ Profile management
-✔ Appointment booking
-✔ Hospital browsing
-✔ Data viewing, sharing, and deletion
-
-# Video Demostration
-
++ Donor registration
++ Profile management
++ Appointment booking
++ Hospital browsing
++ Data viewing, sharing, and deletion
 
 It uses a simple reference-code linking system (not a security token system) and does not involve any backend or external services.
+
+# Video Demostration
 
