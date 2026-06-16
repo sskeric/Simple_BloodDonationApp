@@ -45,7 +45,7 @@ Search donor profile using IC number
 + Contact information
 + Automatically fetches appointment using reference code
 Supports:
-+ Share profile via other apps (WhatsApp, Gmail, etc.)
++ Share profile via other apps (WhatsApp, Gmail, etc.) - The email sharing feature relies on the device's email application (e.g., Gmail). Ensure an email account is configured and synced on the device before using this feature.
 + Delete profile + appointment data
 
 6. 🧭 Navigation System
