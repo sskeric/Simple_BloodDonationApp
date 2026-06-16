@@ -45,7 +45,14 @@ Search donor profile using IC number
 + Contact information
 + Automatically fetches appointment using reference code
 Supports:
-+ The Share Profile feature uses Android's email intent. An email application (e.g., Gmail) must be installed and configured on the device. The actual sending of emails is handled by the selected email application.
++ Email Sharing Profile Feature
+The application uses Android's email sharing functionality to export and send donor profile information through an installed email application (e.g., Gmail).
+During my video demonstration or testing, Gmail may display a "Queued" status instead of sending the email immediately. This behavior is controlled by the email application and device settings, not by the application itself. To send emails successfully, users should ensure that:
+a. An email application (such as Gmail) is installed.
+b. A valid email account is configured and signed in.
+c. Internet connectivity is available.
+d. Email synchronization is enabled on the device.
+Once these requirements are met, the shared profile information can be sent normally through the selected email application.
 + Delete profile + appointment data
 
 6. 🧭 Navigation System
